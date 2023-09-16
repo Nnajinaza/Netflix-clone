@@ -1,7 +1,9 @@
 import React from "react";
 import Nav from "../components/Nav";
 import Banner from "../components/Banner";
-import { RiArrowRightSLine } from "react-icons/ri";
+import requests from "../Request";
+import FeaturedMovies from "../components/FeaturedMovies";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -12,26 +14,13 @@ const Home = () => {
             <div className="col12">
               <Banner />
               <Nav />
+              <FeaturedMovies title="Top rated" fetchUrl={requests.fetchTopRated} isLargeRow />
+              <Footer />
             </div>
           </div>
         </div>
       </section>
-      <section className="featured-first-row">
-        <div className="featured-section">
-          <div className="featured-movie">
-            <h4 className="featured">Featured Movie</h4>
-          </div>
-          <div className="see-more-option">
-            <h5 className="see-more">See more</h5>
-            <RiArrowRightSLine color="#BE123C" />
-          </div>
-        </div>
-      </section>
-      <section className="featured-movies">
-        <div className="featured-card">
-          <img src="images/stranger-things.jpg" alt="stranger things" />
-        </div>
-      </section>
+
     </>
   );
 };
