@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 function FeaturedMovies({ title, fetchUrl, isLargeRow = false }) {
   const [movies, setMovies] = useState([]);
-  const [visibleMovies, setVisibleMovies] = useState(10); // Initially, display 5 movies
+  const [visibleMovies, setVisibleMovies] = useState(10); // Initially, display 10 movies
   const [numColumns, setNumColumns] = useState(5); // Initially, display 5 columns
   const base_url = "https://image.tmdb.org/t/p/original/";
 
@@ -56,9 +56,16 @@ function FeaturedMovies({ title, fetchUrl, isLargeRow = false }) {
           }}
         >
           {movies.slice(0, visibleMovies).map((movie) => (
-            <Link to={`/movie/${movie.id}`} key={movie.id} className="movie-item" data-testid="movie-card">
+            <Link
+              to={`/movie/${movie.id}`} // Navigate to the MoviePage with movie ID
+              key={movie.id}
+              className="movie-item"
+              data-testid="movie-card"
+            >
               <img
-                src={`${base_url}${isLargeRow ? movie.poster_path : movie.backdrop_path}`}
+                src={`${base_url}${
+                  isLargeRow ? movie.poster_path : movie.backdrop_path
+                }`}
                 alt={movie.title}
                 data-testid="movie-poster"
               />

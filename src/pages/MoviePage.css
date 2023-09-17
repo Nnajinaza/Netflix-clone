@@ -10,7 +10,7 @@
 .rectangle-bar {
     position: absolute;
     width: 180px;
-    height: 100vh;
+    height: 650px;
     border: 1px solid #2221214d;
     border-top-right-radius: 45px;
     border-bottom-right-radius: 45px;
@@ -20,13 +20,28 @@
 
 .rectanle-box {
     position: absolute;
-    width: 170px;
+    width: 140px;
     height: 150px;
     left: 28px;
     top: 429px;
     border: 1px solid rgba(190, 18, 60, 0.7);
     border-radius: 20px;
 }
+
+.rectanle-box P {
+    font-size: small;
+
+}
+
+.movie-section {
+    width: 1198px;
+    height: 449px;
+    top: 38px;
+    left: 263px;
+    border-radius: 20px;
+
+}
+
 .logo-moviebox {
     display: flex;
     flex-direction: row;
@@ -44,7 +59,7 @@
     height: 50px;
     border: 7px solid #BE123C;
     border-radius: 50%;
-  }
+}
 
 
 /* MovieBox */
@@ -74,7 +89,7 @@
     line-height: 16px;
     font-weight: 500;
     margin-bottom: 30px;
-    
+
     /* animation-timing-function: ease-in-out;
     animation-duration: 300ms; */
 
@@ -130,12 +145,16 @@
 }
 
 .play-screen {
-    width: 1100px;
-    height: 449px;
     top: 38px;
     left: 263px;
     border-radius: 20px;
     margin-left: 263px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
 .play-btn {
@@ -147,7 +166,7 @@
 }
 
 .watch-trailer {
-    width: 168px;
+    width: 1000px;
     height: 38px;
     top: 119px;
     font-family: Poppins;
@@ -156,8 +175,6 @@
     line-height: 38px;
     letter-spacing: 0em;
     text-align: left;
-    box-shadow: 0px 2px 4px 0px #00000040;
-    background: #E8E8E8;
 
 }
 
@@ -168,7 +185,6 @@
     top: 518px;
     left: 281px;
     border-radius: 15px;
-    border: 1px solid #F8E7EB;
 }
 
 .description {
@@ -262,7 +278,6 @@ linear-gradient(0deg, #FFFFFF, #FFFFFF); */
     height: 55px;
     top: 886px;
     left: 275px;
-    border: 1px solid #C7C7C7;
 }
 
 top-rated-btn {

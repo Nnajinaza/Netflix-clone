@@ -4,6 +4,7 @@ import Banner from "../components/Banner";
 import requests from "../Request";
 import FeaturedMovies from "../components/FeaturedMovies";
 import Footer from "../components/Footer";
+import MoviePage from "./MoviePage";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
               <Banner />
               <Nav />
               <FeaturedMovies title="Top rated" fetchUrl={requests.fetchTopRated} isLargeRow />
+              <MoviePage fetchUrl={requests.fetchMovieDtails} isLargeRow />
               <Footer />
             </div>
           </div>
